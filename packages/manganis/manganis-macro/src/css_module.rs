@@ -69,7 +69,7 @@ pub(crate) fn expand_css_module_struct(
     let mut linker_tokens = quote! {
         /// Auto-generated Manganis asset for css modules.
         #[allow(missing_docs)]
-        const ASSET: manganis::Asset =
+        pub const ASSET: manganis::Asset =
     };
     attribute.asset_parser.to_tokens(&mut linker_tokens);
 
